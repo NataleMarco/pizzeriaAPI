@@ -7,7 +7,7 @@
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
+		</parent>
 	<groupId>com.marquitos</groupId>
 	<artifactId>marquitos-pizzeria</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -16,51 +16,56 @@
 	<url/>
 	<licenses>
 		<license/>
-	</licenses>
+		</licenses>
 	<developers>
 		<developer/>
-	</developers>
+		</developers>
 	<scm>
 		<connection/>
 		<developerConnection/>
 		<tag/>
 		<url/>
-	</scm>
+		</scm>
 	<properties>
 		<java.version>17</java.version>
-	</properties>
+		</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+			</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-	</dependencies>
+			</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+    			<version>2.7.8</version>
+			</dependency>
+		</dependencies>
 
 	<build>
 		<plugins>
@@ -72,11 +77,11 @@
 						<exclude>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+							</exclude>
+						</excludes>
+					</configuration>
+				</plugin>
+			</plugins>
+		</build>
 
-</project>
+	</project>
