@@ -51,6 +51,6 @@ public class OrderEntity{
 	@JsonIgnore
 	private CustomerEntity customer;
 
-	@OneToMany(mappedBy = "order",fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "order")
 	private List<OrderItemEntity> items;
 }
