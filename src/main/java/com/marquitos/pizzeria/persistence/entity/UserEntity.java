@@ -34,7 +34,7 @@ public class UserEntity {
 	private Boolean locked;
 
 	@Column(nullable = false, columnDefinition = "TINYINT")
-	private Boolean disable;
+	private Boolean disabled;
 
 	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
 	private List<UserRoleEntity> roles;

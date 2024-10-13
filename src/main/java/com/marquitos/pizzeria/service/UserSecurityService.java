@@ -1,8 +1,5 @@
 package com.marquitos.pizzeria.service;
 
-import javax.security.auth.login.AccountLockedException;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,9 +12,6 @@ import com.marquitos.pizzeria.persistence.repository.UserRepository;
 
 @Service
 public class UserSecurityService implements UserDetailsService{
-
-
-
 
 	private final UserRepository userRepository;
 
@@ -33,9 +27,6 @@ public class UserSecurityService implements UserDetailsService{
 		UserEntity userEntity = this.userRepository.findById(username)
 			.orElseThrow(() -> new UsernameNotFoundException("User" + username  + " not found."));
 
-
-
-
 		String[] roles = userEntity.getRoles().stream().map(UserRoleEntity::getRole).toArray(String[]::new);
 
 		return User.builder()
@@ -43,9 +34,7 @@ public class UserSecurityService implements UserDetailsService{
 		.password(userEntity.getPassword())
 		.roles(roles)
 		.accountLocked(userEntity.getLocked())
-		.disabled(userEntity.getDisable())
+		.disabled(userEntity.getDisabled())
 		.build();
-
 	}
-
 }
